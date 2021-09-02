@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'home.html' %}
+
+{% block content %}
+    <div class="user">
+            <div class="date">
+                {{ user.first_name }},  {{ user.last_name}}, {{ user.age }},  {{ user.profession }}
+            </div>
+
+     <a class="btn btn-default" href="{% url 'user_edit' user.pk %}"><span class="glyphicon glyphicon-pencil">edit</span></a>
+     <a class="btn btn-default" href="{% url 'user_delete' user.pk %}"><span class="glyphicon glyphicon-pencil">delete</span></a>
+{% endblock %}

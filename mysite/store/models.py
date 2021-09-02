@@ -11,7 +11,6 @@ class User(models.Model):
         ('Frontend developer', 'FRONTEND DEVELOPER'),
         ('Human Resources', 'HUMAN RESOURCES')
     )
-    id = models.CharField(max_length=100, primary_key=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     age = models.PositiveIntegerField()
@@ -19,5 +18,3 @@ class User(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
-
-
